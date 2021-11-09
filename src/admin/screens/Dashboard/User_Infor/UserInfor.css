@@ -1,0 +1,161 @@
+#DB-Avartar{
+    position: absolute;
+    width: 195.65px;
+    height: 195px;
+    left: calc(50% - 519.65px/2 - 461.1px);
+    top: 48px;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 160px;
+}
+.DB-userInfor{
+position: absolute;
+width: 1496px;
+height: 261px;
+left: 379px;
+top: 16px;
+background: #FFFFFF;
+border-radius: 40px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.DB-name{
+    position: absolute;
+width: 268px;
+height: 82px;
+left: 920.07px;
+top: 28px;
+}
+.DB-fullName{
+position: relative;
+width: 400px;
+height: 44px;
+left: calc(50% - 1247px/2 - 188.93px);
+top: 30px;
+font-family: Inter;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 44px;
+color: #22242C;
+}
+.DB-tag{
+position: relative;
+width: 254px;
+height: 22px;
+left: calc(50% - 1242px/2 - 188.93px);
+top: 40px;
+
+/* Text/Text 1 Regular */
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+color: #8E8EA1;
+}
+.DB-changePass{
+    position: absolute;
+    width: 256.86px;
+    height: 52px;
+    left: 1203px;
+    top: 180px;
+    background: #6160DC;
+    border-radius: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+.DB-insideChangePass{
+    position: absolute;
+    width: 158.53px;
+    height: 22px;
+    left: calc(50% - 1691.53px/2 + 736.42px);
+    top: 14px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+
+}
+#DB-changepass{
+    position: relative;
+    left: 88px;
+}
+.DB-logOut{
+    position: absolute;
+    width: 144px;
+    height: 52px;
+    left: calc(50% - 500px/2 + 818.5px);
+    top: 23px;
+    background: #6160DC;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 40px;
+    
+}
+#DB-LogOut{
+    position: relative;
+    left: 37px;
+}
+.DB-insideLogOut{
+    position: absolute;
+    width: 62px;
+    height: 22px;
+    left: calc(50% - 1742px/2 + 818px);
+    top: 14px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.DB-idDivision{
+    position: absolute;
+    width: 216.57px;
+    height: 51px;
+    left: 244px;
+    top: 180px;
+}
+.DB-titleOfInfor{
+    position: absolute;
+    width: 101.29px;
+    height: 17px;
+    left: calc(50% - -371.71px/2 - 235.12px);
+    top: 3px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8E8EA1;
+}
+.DB-detail{
+    position: absolute;
+    width: 101.34px;
+    height: 26px;
+    left: calc(50% - -353.65999999999997px/2 - 228.1px);
+    top: 25px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    color: #202020;
+}
+.DB-emailDivision{
+    position: absolute;
+    width: 219.97000000000003px;
+    height: 52px;
+    left: 508.07px;
+    top: 180px;
+}
+.DB-phoneDivision{
+    position: absolute;
+    width: 225.62px;
+    height: 50px;
+    left: 948.04px;
+    top: 180px;
+}

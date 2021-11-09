@@ -1,0 +1,365 @@
+h1{
+    position: absolute;
+    width: 350px;
+    height: 34.12px;
+    left: 23px;
+    top: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 29px;
+    color: #22242C;
+}
+.billingHistory{
+    position:relative;
+width: 1111px;
+height: 616px;
+left: 383px;
+top: 294px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background: #FFFFFF;
+border-radius: 40px;
+margin-left: 0px;
+}
+.listBill{
+
+padding: 0px;
+
+position: absolute;
+width: 1096px;
+height: 516px;
+left: 50px;
+top: 96px;
+}
+.list{
+position: static;
+width: 1096px;
+height: 104px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: -18px 0px;
+}
+.avatar{
+    position: relative;
+width: 48px;
+height: 48px;
+left: -30px;
+top: 26px;
+
+/* Gray 2 */
+
+background: #F5F5F5;
+border-radius: 40px;
+}
+.nameUser{
+    position: relative;
+width: 133px;
+height: 22px;
+left: -12px;
+top: 8px;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* Black */
+
+color: #22242C;
+}
+.id{
+    position: relative;
+width: 112px;
+height: 22px;
+left: 279px;
+top: -12px;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 22px;
+/* identical to box height */
+
+
+color: #808080;
+}
+.amount{
+    position: relative;
+width: 80px;
+height: 22px;
+left: 465px;
+top: -36px;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* Black */
+
+color: #22242C;
+}
+.date{
+    position: relative;
+width: 111px;
+height: 22px;
+left: 614px;
+top: -72.5px;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height */
+
+
+/* Black */
+
+color: #22242C;
+}
+.time{
+    position: relative;
+width: 87px;
+height: 17px;
+left: 516px;
+top: -50.5px;
+
+/* Text/Text 2 Regular */
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 17px;
+/* identical to box height */
+
+
+/* Gray */
+
+color: #8E8EA1;
+}
+.Complete{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+position: relative;
+width: 100px;
+height: 40px;
+left: 806px;
+top: -97.5px;
+
+background: #00A389;
+border-radius: 20px;
+}
+.Pending{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+position: relative;
+width: 100px;
+height: 40px;
+left: 806px;
+top: -97.5px;
+
+background: #8E8EA1;
+border-radius: 20px;
+}
+.Canceled{
+    display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px;
+
+position: relative;
+width: 100px;
+height: 40px;
+left: 806px;
+top: -97.5px;
+
+background: #ff0318;
+border-radius: 20px;
+}
+.textStatus{
+    position: relative;
+width: 75px;
+height: 17px;
+left: 1px;
+top: 0px;
+
+/* Text/Text 2 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+text-align: center;
+
+color: #ffffff;
+}
+.dot{
+position: relative;
+width: 41px;
+height: 29px;
+left: 1000px;
+top: -139px;
+border-style: hidden;
+background: white;
+}
+.backPage{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: 50px;
+    top: 1.5px;
+    
+    /* Inside Auto Layout */
+    background: white;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 16px;
+    border: white;
+}
+.nextPage{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    left: -28px;
+    top: 1.5px;
+    
+    
+    /* Inside Auto Layout */
+    background: white;
+    border: white;
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+    margin: 0px 16px;
+}
+.pagination{
+    position: absolute;
+width: 1023px;
+height: 51px;
+left: 62px;
+top: 551px;
+}
+.page{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+
+position: absolute;
+width: 280px;
+height: 51px;
+left: 700px;
+top: -4px;
+}
+#page1{
+position: relative;
+width: 40px;
+height: 40px;
+left: 25px;
+top: 0.5px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 16px;
+box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+border-radius: 40px;
+}
+#page2{
+    position: relative;
+width: 40px;
+height: 40px;
+left: 13px;
+top: 0.5px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 16px;
+box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+border-radius: 40px;
+}
+#page3{
+    position: relative;
+width: 40px;
+height: 40px;
+left: -1px;
+top: 0.5px;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 16px;
+box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+border-radius: 40px;
+}
+#Onetosix{
+    font-family: Inter;
+font-weight: bold;
+}
+#quantityOfBill{
+    font-family: Inter;
+    font-weight: bold;
+}
+#S{
+    font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 17px;
+
+/* Gray */
+
+color: #8E8EA1;
+
+}

@@ -1,0 +1,168 @@
+.pendingAcc{
+position: absolute;
+width: 355px;
+height: 616px;
+left: 1525px;
+top: 294px;
+background: white;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 40px;
+}
+.titlePending{
+    position: static;
+    width: 300px;
+    height: 32.1px;
+    left: 50px;
+    top: 12.420000000000016px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 29px;
+    color: #22242C;
+    margin-left: 42px;
+    margin-bottom: 32px;
+    margin-top: 29px;
+}
+.listAcc{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 287px;
+height: 498.07px;
+left: 6px;
+top: 73px;
+}
+.accountPending{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 24px;
+    
+    position: static;
+    width: 250px;
+    height: 64px;
+    left: 0px;
+    top: 0px;
+    
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    /* Shadow */
+    
+    border-style: hidden;
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 0px;
+    
+}
+.avatarPending{
+ /* profilePicture */
+
+
+position: relative;
+width: 40px;
+height: 40px;
+left: 0px;
+top: 0px;
+
+
+/* Inside Auto Layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 18px;  
+border-radius: 40px;
+}
+.namePending{
+    position: relative;
+    width: 167px;
+    height: 22px;
+    left: -10px;
+    top: -12px;
+    
+    /* Heading/Heading 3 */
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    
+    /* Black */
+    
+    color: #22242C;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+.offlineTime{
+    position: relative;
+    width: 46px;
+    height: 17px;
+    left: -218px;
+    top: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #8E8EA1;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+.checkPending{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    
+    position: relative;
+    width: 40px;
+    height: 40px;
+    left: 4px;
+    top: 0px;
+    
+}
+.buttonPending{
+    position: absolute;
+    width: 200.98px;
+    height: 50.41px;
+    left: 70px;
+    top: 530.1700000000001px;
+    right: 4.04%;
+    bottom: 8.7%;
+    background: #F5F5F5;
+    border-radius: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.viewMore{
+    position: absolute;
+    width: 97.39px;
+    height: 24.35px;
+    left: 51px;
+    top: 12px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #808080;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./verify.css">
+    <title>Document</title>
+    <script type="text/javascript" src="../ListEmployee/handle.js"></script>
+</head>
+<body>
+    <div class = "verify">
+    <button type="button" class="button1 back" ></button>
+    <h1>Verifying account</h1>
+    <div class="content">
+        <div class="right-menu">
+            <h2>Account</h2><br>
+            <form name="employee" onsubmit="">
+                <div class="left">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="info" id="name"><br>
+                    <label for="id-code">Identity Code</label><br>
+                    <input type="text" name="info" id="id-code"><br>
+                    <label for="username">Username</label><br>
+                    <input type="text" name="info" id="username"><br>
+                    <label for="address">Address</label><br>
+                    <input type="text" name="info" id="address"><br>
+                </div>
+                <div class="right">
+                    <label for="date-of-birth">Date of Birth</label><br>
+                    <input type="text" name="info" id="date-of-birth"><br>
+                    <label for="phone">Phone</label><br>
+                    <input type="text" name="info" id="phone"><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="info" id="password"><br>
+                    <label for="email">Email</label><br>
+                    <input type="text" name="info" id="email"><br>
+                    <label for="status">Account Status</label>
+
+                    <!-- switch button start-->
+                    <div class="switch-button">
+                        <input class="switch-button-checkbox" type="checkbox"></input>
+                        <label style="color: #F5F5F5;" class="switch-button-label" for=""><span class="switch-button-label-span">Reject</span></label>
+                      </div>
+                      <!-- switch button end-->
+                    <button type="submit" class="button save" >Add new member/Save</button>
+                </div>
+            </form>
+        </div>
+    
+            <!-- right menu  end-->
+
+    </div>
+    </div>
+</body>
+</html>
