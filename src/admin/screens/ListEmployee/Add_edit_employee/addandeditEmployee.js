@@ -40,6 +40,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
       address: info.address,
       name: info.name,
     }
+    console.log(data)
     await axios.post(url, data, {
       headers: { "Authorization": `Bearer ${token}` },
     })
@@ -72,6 +73,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
       address: info.address,
       name: info.name,
     }
+    console.log(data)
     await axios.post(url, data, {
       headers: { "Authorization": `Bearer ${token}` },
     })
@@ -94,7 +96,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
     <div className="pops-up-menu">
       <div id="head">
         <button type="button" className="button1" onClick={() => { callBack() }} />
-        <h1>Adding/Editting Employee</h1>
+        <h1>{(isAdd) ? "Adding" : "Editing"} Employee</h1>
       </div>
       <div className="content">
         {/* left menu  start*/}
@@ -190,14 +192,14 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
             </div>
             <div className="row">
               <div class="col">
-                <label class="lab" htmlFor="userName">Username</label><br />
+                <label class="lab" htmlFor="userName">Email</label><br />
                 <InputWithValidate
                   elementId="username"
-                  callBack={value => updateInfo({ ...info, userName: value })}
-                  validate={validateString} // Luôn đúng 
+                  callBack={value => updateInfo({ ...info, email: value })}
+                  validate={validateEmail} // Luôn đúng 
                   needValidateState={needValidate}
                   message=""
-                  valueState={info.userName}
+                  valueState={info.email}
                   stylesMessage={{
                     paddingLeft: 20,
                   }}
@@ -225,7 +227,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
             </div>
-            <div class="row">
+            {/* <div class="row">
               <div class="col">
                 <label class="lab" htmlFor="password">Password</label><br />
                 <InputWithValidate
@@ -265,26 +267,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
 
               </div>
             </div>
-
-
-            {/* </div> */}
-            {/* <div className="right"> */}
-            {/* <label htmlFor="date-of-birth">Date of birth</label><br />
-              <InputWithValidate
-                elementId="date-of-birth"
-                callBack={value => updateInfo({ ...info, birth: value })}
-                validate={validateString} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.birth}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              /> */}
-
+ */}
 
 
 
@@ -292,7 +275,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
               <div class="col">
                 <label class="lab" htmlFor="address">Address</label><br />
                 <InputWithValidate
-                  className="left"
+                  className="left-address"
                   elementId="address"
                   callBack={value => updateInfo({ ...info, address: value })}
                   validate={validateString} // Luôn đúng 
@@ -302,12 +285,9 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                   stylesMessage={{
                     paddingLeft: 20,
                   }}
-                  styles={{
-                    marginBottom: 15,
-                  }}
                 />
               </div>
-              <div class="col">
+              {/* <div class="col">
                 <label class="lab" htmlFor="email">Email</label><br />
                 <InputWithValidate
                   elementId="email"
@@ -323,7 +303,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                     marginBottom: 15,
                   }}
                 />
-              </div>
+              </div> */}
             </div>
             <div class="row">
               <button type="button" id="save" onClick={() => {
@@ -331,8 +311,10 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 const checkEmail = (validateEmail(info.email) === "")
                 const checkIdCode = (validateIdCode(info.identifyNumber) === "")
                 const checkPhone = (validatePhone(info.phoneNumber) === "")
-                const checkPassword = (validatePassword(info.password) === "")
-                if (checkEmail && checkIdCode && checkPassword && checkPhone) {
+                console.log(checkEmail)
+                console.log(checkIdCode)
+                console.log(checkPhone)
+                if (checkEmail && checkIdCode && checkPhone) {
                   if (isAdd) {
                     console.log("Add a new member")
                     addNewMember()
@@ -341,6 +323,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                     console.log("Edit a member")
                   }
                 } else {
+
                   console.log("Noooooooooooooo")
                 }
               }

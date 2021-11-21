@@ -80,7 +80,7 @@ function Recep({ callBack }) {
   return <div>
     <MenuBar
       callBack={changeScreen}
-      titleBtn={["Dashboard", "Analysis Billing", "List User", "List Bike"]}
+      titleBtn={["Dashboard", "Pending List", "List User", "List Bike"]}
     >
     </MenuBar>
     {

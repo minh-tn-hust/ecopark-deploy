@@ -57,7 +57,7 @@ function Login({ callBack }) {
                         marginLeft: 0,
                         marginBottom: 16,
                     }}>Login</h1>
-                    <h5>Username</h5>
+                    <h5>Email</h5>
                     <InputWithValidate
                         message={serverMessage[0]}
                         className="login-input"

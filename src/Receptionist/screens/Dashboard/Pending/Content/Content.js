@@ -95,6 +95,17 @@ function Content() {
             setShowVerify(false)
 
           }} />
+        // <Verify_info infor={{
+        //   name: "Minh",
+        //   identifyNumber: "Hello",
+        //   phoneNumber: "Hello",
+        //   password: "Hello",
+        //   address: "Hello",
+        //   email: "Hello@",
+        //   _id: "IDDIDID",
+        //   residentNumber: "recode"
+        // }
+        // }></Verify_info>
 
       }
       <h2>Pending History</h2>

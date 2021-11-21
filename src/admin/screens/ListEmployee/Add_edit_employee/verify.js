@@ -63,8 +63,8 @@ function Verify_info({ infor, callBack }) {
             </div>
           </div>
           <div className="row-verify">
-            {/* <div class="col-verify">
-              <label class="lab-verify" htmlFor="userName">Username</label><br />
+            <div class="col-verify">
+              <label class="lab-verify" htmlFor="userName">Email</label><br />
               <InputWithValidate
                 disable={true}
                 elementId="username"
@@ -72,7 +72,7 @@ function Verify_info({ infor, callBack }) {
                 validate={validateString} // Luôn đúng 
                 needValidateState={needValidate}
                 message=""
-                valueState={infor.userName}
+                valueState={infor.email}
                 stylesMessage={{
                   paddingLeft: 20,
                 }}
@@ -80,7 +80,7 @@ function Verify_info({ infor, callBack }) {
                   marginBottom: 15,
                 }}
               />
-            </div> */}
+            </div>
             <div class="col">
               <label class="lab-verify" htmlFor="phoneNumber">Phone number</label><br />
               <InputWithValidate
@@ -101,7 +101,7 @@ function Verify_info({ infor, callBack }) {
             </div>
           </div>
           <div class="row-verify">
-            <div class="col-verify">
+            {/* <div class="col-verify">
               <label class="lab-verify" htmlFor="password">Password</label><br />
               <InputWithValidate
                 disable={true}
@@ -119,7 +119,7 @@ function Verify_info({ infor, callBack }) {
                   marginBottom: 15,
                 }}
               />
-            </div>
+            </div> */}
             <div class="col-verify">
               <label class="lab-verify" htmlFor="password">Resident Number</label><br />
               <InputWithValidate
@@ -129,7 +129,7 @@ function Verify_info({ infor, callBack }) {
                 validate={validatePassword} // Luôn đúng 
                 needValidateState={needValidate}
                 message=""
-                valueState={infor.password}
+                valueState={infor.residentNumber}
                 stylesMessage={{
                   paddingLeft: 20,
                 }}
@@ -138,6 +138,13 @@ function Verify_info({ infor, callBack }) {
                 }}
               />
 
+            </div>
+            <div class="col-verify">
+              <label class="lab-verify" htmlFor="status">Status</label>
+              <div id="statusdiv">
+                <div class={(isApprove) ? "status" : "unstatus"} onClick={() => setApprove(true)}>Approve</div>
+                <div class={(!isApprove) ? "status" : "unstatus"} onClick={() => setApprove(false)}>Reject</div>
+              </div>
             </div>
           </div>
 
@@ -159,8 +166,8 @@ function Verify_info({ infor, callBack }) {
                 marginBottom: 15,
               }}
             /> */}
-          <div className="row-verify">
-            <div class="col-verify">
+          {/* <div className="row-verify"> */}
+          {/* <div class="col-verify">
               <label class="lab-verify" htmlFor="address">Address</label><br />
               <InputWithValidate
                 disable={true}
@@ -178,8 +185,8 @@ function Verify_info({ infor, callBack }) {
                   marginBottom: 15,
                 }}
               />
-            </div>
-            <div class="col-verify">
+            </div> */}
+          {/* <div class="col-verify">
               <label class="lab-verify" htmlFor="email">Email</label><br />
               <InputWithValidate
                 disable={true}
@@ -197,13 +204,13 @@ function Verify_info({ infor, callBack }) {
                 }}
               />
             </div>
-          </div>
+          </div> */}
           <div class="row-verify">
             <div class="col-verify">
-              <label class="lab-verify" htmlFor="status">Status</label>
+              <label class="lab-verify" htmlFor="status" style={{ opacity: 0 }}>Status</label>
               <div id="statusdiv">
-                <div class={(isApprove) ? "status" : "unstatus"} onClick={() => setApprove(true)}>Approve</div>
-                <div class={(!isApprove) ? "status" : "unstatus"} onClick={() => setApprove(false)}>Reject</div>
+                <div class={(isApprove) ? "status" : "unstatus"} style={{ opacity: 0, cursor: "context-menu" }} onClick={() => setApprove(true)}>Approve</div>
+                <div class={(!isApprove) ? "status" : "unstatus"} style={{ opacity: 0, cursor: "context-menu" }} onClick={() => setApprove(false)}>Reject</div>
               </div>
             </div>
             <div class="col-verify" id="statusdiv">

@@ -11,10 +11,10 @@ function UserInfor(props) {
     let info = JSON.parse(localStorage.getItem("info"))
     if (localStorage.getItem("role") === "admin") {
         info = {
-            name: "Nguyễn Anh  Dũng",
-            identifyNumber: "121212121",
-            email: "dungdeptrai@yahu.com",
-            phoneNumber: "0999999999"
+            name: "Admin",
+            identifyNumber: "Loading...",
+            email: "admin@gmail.com",
+            phoneNumber: "Loading..."
         }
     }
     return (
