@@ -23,6 +23,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
   }
   const [loading, setLoading] = useState(false)
   const [needValidate, setValidate] = useState(1)
+  const [confirmPassword, setConfirm] = useState("")
 
   async function editMember() {
     setLoading(true)
@@ -227,47 +228,55 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 />
               </div>
             </div>
-            {/* <div class="row">
-              <div class="col">
-                <label class="lab" htmlFor="password">Password</label><br />
-                <InputWithValidate
-                  className="left"
-                  elementId="password"
-                  password={true}
-                  callBack={value => updateInfo({ ...info, password: value })}
-                  validate={validatePassword} // Luôn đúng 
-                  needValidateState={needValidate}
-                  message=""
-                  valueState={info.password}
-                  stylesMessage={{
-                    paddingLeft: 20,
-                  }}
-                  styles={{
-                    marginBottom: 15,
-                  }}
-                />
-              </div>
-              <div class="col">
-                <label class="lab" htmlFor="password">Confirm Password</label><br />
-                <InputWithValidate
-                  password={true}
-                  elementId="password"
-                  callBack={value => updateInfo({ ...info, password: value })}
-                  validate={validatePassword} // Luôn đúng 
-                  needValidateState={needValidate}
-                  message=""
-                  valueState={info.password}
-                  stylesMessage={{
-                    paddingLeft: 20,
-                  }}
-                  styles={{
-                    marginBottom: 15,
-                  }}
-                />
+            {
+              (isAdd) && <div class="row">
+                <div class="col">
+                  <label class="lab" htmlFor="password">Password</label><br />
+                  <InputWithValidate
+                    className="left"
+                    elementId="password"
+                    password={true}
+                    callBack={value => updateInfo({ ...info, password: value })}
+                    validate={validatePassword} // Luôn đúng 
+                    needValidateState={needValidate}
+                    message=""
+                    valueState={info.password}
+                    stylesMessage={{
+                      paddingLeft: 20,
+                    }}
+                    styles={{
+                      marginBottom: 15,
+                    }}
+                  />
+                </div>
+                <div class="col">
+                  <label class="lab" htmlFor="password">Confirm Password</label><br />
+                  <InputWithValidate
+                    password={true}
+                    elementId="password"
+                    callBack={value => setConfirm(value)}
+                    validate={(password) => {
+                      if (password !== info.password) {
+                        return "Password not match"
+                      } else {
+                        return ""
+                      }
+                    }} // Luôn đúng 
+                    needValidateState={needValidate}
+                    message=""
+                    valueState={info.password}
+                    stylesMessage={{
+                      paddingLeft: 20,
+                    }}
+                    styles={{
+                      marginBottom: 15,
+                    }}
+                  />
 
+                </div>
               </div>
-            </div>
- */}
+            }
+
 
 
 
@@ -316,8 +325,12 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 console.log(checkPhone)
                 if (checkEmail && checkIdCode && checkPhone) {
                   if (isAdd) {
-                    console.log("Add a new member")
-                    addNewMember()
+                    console.log(info.password)
+                    console.log(confirmPassword)
+                    if (info.password === confirmPassword) {
+                      console.log("Add a new member")
+                      addNewMember()
+                    }
                   } else {
                     editMember()
                     console.log("Edit a member")
@@ -326,6 +339,7 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
 
                   console.log("Noooooooooooooo")
                 }
+
               }
               }>
 
