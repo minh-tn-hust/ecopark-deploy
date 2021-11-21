@@ -20,12 +20,19 @@ function Content({ loading, updateList, updateRole }) {
   const [pages, setPages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [option, setOption] = useState([true, false]);
+
   const handleSetPagesUp = (pages, lengths) => {
     const newpages = [];
+    let isChange = false;
     pages.map(page => {
-      if (page + 3 < lengths / 10 + 1) newpages.push(page + 3);
+      console.log(lengths / 10 + 1);
+      console.log(page);
+      if (page + 3 < lengths / 10 + 1) {
+        newpages.push(page + 3);
+        isChange = true;
+      }
     })
-    return setPages(newpages)
+    if (isChange) return setPages(newpages)
   }
 
   const handleSetPagesDown = (pages) => {
@@ -38,12 +45,8 @@ function Content({ loading, updateList, updateRole }) {
     }
   }
 
-  console.log(posts);
-
   const handleCheck = (id) => {
     setChecked(prev => {
-      console.log("handle");
-      console.log(checked);
       const isChecked = checked.includes(id);
       if (isChecked) {
         setCheckedAll(false)
@@ -56,23 +59,6 @@ function Content({ loading, updateList, updateRole }) {
       }
     })
   }
-
-  // const handleCheckAll = (flag) => {
-  //   setChecked(prev => {
-  //     const isCheckedAll = flag;
-  //     if (isCheckedAll) {
-  //       setCheckedAll(!flag)
-  //       return checked.splice(0, checked.length)
-  //     } else {
-  //       console.log("hahahahfalse");
-  //       console.log(checked);
-  //       setCheckedAll(!flag)
-  //       posts.map(post => {
-  //         if (!checked.includes(post._id)) return [...prev,post._id]
-  //       })
-  //     }
-  //   })
-  // }
 
   const handleCheckAll = (flag) => {
     if (flag == true) {
@@ -101,6 +87,8 @@ function Content({ loading, updateList, updateRole }) {
         console.log(error);
       });
     console.log(posts.length)
+    setChecked([]);
+    setCheckedAll(false)
   }
 
   async function getEmployee(type) {
@@ -109,11 +97,14 @@ function Content({ loading, updateList, updateRole }) {
     await axios.get(url, { headers: { "Authorization": `Bearer ${token}` } })
       .then(res => {
         setPosts(res.data.data)
+        console.log(res.data.data.length / 10);
         setupPages(res.data.data.length)
       }).catch(function (error) {
         console.log(error);
       });
     setLoading(false)
+    setChecked([]);
+    setCheckedAll(false)
   }
 
   //Call API
@@ -129,10 +120,9 @@ function Content({ loading, updateList, updateRole }) {
     setCheckedAll(false)
   }, [option, loading])
 
-
   const setupPages = (length) => {
-    if (length / 10 >= 3) setPages([1, 2, 3]);
-    if (length / 10 == 2) setPages([1, 2]);
+    if (length / 10 > 2) setPages([1, 2, 3]);
+    if (length / 10 <= 2 && length / 10 > 1) setPages([1, 2]);
     if (length / 10 <= 1) setPages([1]);
   }
   console.log("Checked===================")
@@ -207,8 +197,8 @@ function Content({ loading, updateList, updateRole }) {
             <table className="contenttable">
               <thead>
                 <tr>
-                  <th style={{ paddingRight: '32px' }}></th>
-                  <th style={{ paddingRight: '30px' }} ><input
+                  <th style={{ paddingRight: '60px' }}></th>
+                  <th style={{ paddingRight: '40px' }} ><input
 
                     type="checkbox"
                     className="contentcheckbox"
@@ -216,12 +206,10 @@ function Content({ loading, updateList, updateRole }) {
                     onChange={() => handleCheckAll(checkedAll)}
 
                   /></th>
-                  <th style={{ paddingRight: '210px' }}>Information</th>
-                  <th style={{ paddingRight: '99px' }}>Indentify code</th>
-                  <th style={{ paddingRight: '94px' }}>Last in system</th>
-                  <th style={{ paddingRight: '80px' }}>Department</th>
-                  <th style={{ paddingRight: '80px' }}>Location</th>
-                  <th style={{ paddingLeft: '22px' }}>Status</th>
+                  <th style={{ paddingRight: '300px' }}>Information</th>
+                  <th style={{ paddingRight: '150px' }}>Indentify code</th>
+                  <th style={{ paddingRight: '150px' }}>Department</th>
+                  <th style={{ paddingRight: '200px' }}>Location</th>
                   <th></th>
                 </tr>
               </thead>
@@ -253,13 +241,17 @@ function Content({ loading, updateList, updateRole }) {
                           </div>
                         </td>
                         <td style={{ paddingRight: '50px' }} title={post.identifyNumber}>{post.identifyNumber}</td>
-                        <td style={{ paddingRight: '50px' }} title={post.date}>{post.date}</td>
                         <td style={{ paddingRight: '50px' }} >{option[0] == true ? "Receptionist" : "Staff"}</td>
                         <td style={{ paddingRight: '50px' }} title={post.address}>{post.address}</td>
-                        <td style={{ paddingRight: '50px' }} ><button className="contentstatus">Online</button></td>
                         <td style={{ overflow: 'visible' }}>
                           <button className="contentdrop-down-button">
-                            ...
+                            <div className="hover-content">
+                              <div>Name: {post.name}</div>
+                              <div>Email: {post.email}</div>
+                              <div>Identify Number:{post.identifyNumber}</div>
+                              <div>Address: {post.address}</div>
+                              <div>Role: {post.role}</div>
+                            </div>
                             <div className="contentdrop-down-button-list">
                               <div
                                 className="contentedit-button"
@@ -298,7 +290,8 @@ function Content({ loading, updateList, updateRole }) {
 
           <div className="contentcomment">Showing&nbsp;
             <div className="contentBold">
-              {posts.length == 0 ? posts.length : (currentPage - 1) * 10 + 1}-{(((currentPage - 1) * 10 + 10 < (posts.length)) && (currentPage - 1) * 10 + 10) || posts.length}
+              {(currentPage - 1) > 0 ? currentPage - 1 : ""}
+              {((currentPage - 1) * 10 == posts.length) ? 0 : 1}-{(((currentPage - 1) * 10 + 10 < (posts.length)) && (currentPage - 1) * 10 + 10) || posts.length}
             </div>
             &nbsp;from
             <div className="contentBold">&nbsp;{posts.length}&nbsp;</div>
@@ -322,6 +315,7 @@ function Content({ loading, updateList, updateRole }) {
             <img src={goRight} onClick={() => handleSetPagesUp(pages, posts.length)} />
 
           </div>
+
         </div>
 
       </div >

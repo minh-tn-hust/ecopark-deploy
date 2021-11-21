@@ -3,14 +3,17 @@ import UserInfor from "../../screens/Dashboard/User_Infor/UserInfor";
 import React, { Component } from "react";
 import PendingAcc from "./Pending_Account/PendingAcc";
 import BillingHistory from "./Billing_History/BillingHistory";
+import '../Dashboard/Dashboard.css'
 
-
-function Dashboard() {
+function Dashboard({ callBack }) {
   return (
-    <div>
-      <UserInfor></UserInfor>
+    <div className="adminDashboard">
+      <UserInfor tag="Admin in Ecopark BikeRenting" callBack={() => callBack()}></UserInfor>
       <PendingAcc></PendingAcc>
-      <BillingHistory></BillingHistory>
+      <BillingHistory
+        title="Transaction History"
+      >
+      </BillingHistory>
     </div>
   )
 }

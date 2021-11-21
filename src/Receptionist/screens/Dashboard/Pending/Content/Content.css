@@ -1,0 +1,178 @@
+.container {
+    width: 1498px;
+    position: relative;
+    border-radius: 40px;
+    background-color: #FFFFFF;
+    left: 379px;
+    top: 166px;
+}
+
+.container h2{
+    position: relative;
+    width: 283px;
+    height: 44.17px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #22242C;
+    padding-top: 39px;
+    padding-bottom: 70px;
+}
+
+.container .barbottom {
+    margin-top: 50px;
+    width: 1700px;
+    height: 60px;
+    align-items: center;
+    bottom: 77px;
+    justify-items: left;
+}
+
+.barbottom .comment {
+    position: absolute;
+    display: flex;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 32px;
+    color: #8E8EA1;
+}
+
+.barbottom .Bold {
+    font-weight: bold;
+}
+
+.barbottom .numbertab {
+    display: flex;
+    margin-left: 1190px;
+    height: 20px;
+    align-items: center;
+}
+
+.barbottom .numberlist {
+    list-style: none;
+    display: flex;
+    height: 20px;
+    padding: 0px 10px 0px 10px;
+}
+
+.barbottom .number {
+    text-decoration: none;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border: 2px solid #8E8EA1;
+    box-sizing: border-box;
+    border-radius: 100px;
+    color: #6160DC;
+    padding: 13px 20px;
+    margin: 0px 10px;
+}
+.hover-information {
+    width: 400;
+    height: 400;
+    background-color: blue;
+    position: absolute;
+        
+}
+.table {
+    margin-left: 30px;
+    border-collapse: collapse;
+}
+
+.table th {
+    text-align: left;
+    padding-right: 50px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #22242C;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.table tr, td {
+    border-bottom: 1px solid #dddddd;
+    max-width: 201px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.table td {
+    font-family: Inter;
+    font-size: 16;
+    top: 50%;
+    left: 50%;
+    padding: 0px 27px 0px 0px;
+}
+
+.table .infor {
+    display: flex;
+}
+
+.table .avatar {
+    margin-right: 20px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    position: initial;
+}
+
+.table .nameAndEmail {
+    display: grid;
+    align-content: center;
+    padding-left: 16px;
+}
+
+.table .nameIn {
+    position: static;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    /* Black */
+    color: #22242C;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 4px 0px;
+    max-width: 201px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.table .email {
+    font-size: 14px;
+    line-height: 16.94px;
+    color: #8E8EA1;
+    max-width: 201px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.table .checkbox {
+    width: 24px;
+    height: 24px;
+}
+
+.table .status11 {
+    background-color:#00A389;
+    padding: 20px 30px;
+    border-radius: 40px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+}

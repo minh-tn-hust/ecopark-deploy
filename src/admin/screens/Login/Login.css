@@ -45,7 +45,15 @@ h5 {
     margin: 24px 0px 8px 0px;
 }
 
+.select-button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
 .login-button{
+    text-align-last: center;
     margin-top: 28px;
     background: #6160DC;
     border: 1px solid #6160DC;
@@ -53,7 +61,7 @@ h5 {
     border-radius: 40px;
     color: white;
     width: 30%;
-    height: 20%;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;

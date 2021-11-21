@@ -6,16 +6,27 @@ import logout from '../../image/logout.png'
 import changepasspng from '../../image/sync-alt.png'
 import './UserInfor.css'
 
-function UserInfor() {
+function UserInfor(props) {
+    const tag = props.tag
+    let info = JSON.parse(localStorage.getItem("info"))
+    if (localStorage.getItem("role") === "admin") {
+        info = {
+            name: "Nguyễn Anh  Dũng",
+            identifyNumber: "121212121",
+            email: "dungdeptrai@yahu.com",
+            phoneNumber: "0999999999"
+        }
+    }
     return (
         <div>
             <ProFile
+                callBack={() => props.callBack()}
                 avatar={Avtpng}
-                name="Nguyễn Anh Dũng"
-                tag="Admin in Ecopark BikeRenting"
-                phoneNumber="0972873688"
-                email="dung.na194255@sis.hust.edu.vn"
-                idCode="12345689"
+                name={info.name}
+                tag={tag}
+                phoneNumber={info.phoneNumber}
+                email={info.email}
+                idCode={info.identifyNumber}
             >
             </ProFile>
         </div>
@@ -30,34 +41,52 @@ function ProFile(props) {
     const email = props.email
     const idCode = props.idCode
     return (
-        <div className="DB-userInfor">
-            <img id="DB-Avartar" src={avatar} alt="" />
-            <div className="DB-name">
-                <h1 className="DB-fullName">{name}</h1>
-                <span className="DB-tag">{tag}</span>
+        <div className="userInfor">
+            <div id="Avartar">
+                <img id="InsideAvt" src={avatar} alt="" />
             </div>
-            <button className="DB-changePass">
-                <span className="DB-insideChangePass">Change password</span>
-                <img id="DB-changepass" src={changepasspng} alt="" />
-            </button>
-            <button className="DB-logOut">
-                <span className="DB-insideLogOut">Logout</span>
-                <img id="DB-LogOut" src={logout} alt="" />
-            </button>
-            <div className="DB-idDivision">
-                <img className="DB-image" src={Addresspng} alt="" />
-                <span className="DB-titleOfInfor">Identity Code</span>
-                <span className="DB-detail">{idCode}</span>
-            </div>
-            <div className="DB-emailDivision">
-                <img className="DB-image" src={Emailpng} alt="" />
-                <span className="DB-titleOfInfor">Email</span>
-                <span className="DB-detail">{email}</span>
-            </div>
-            <div className="DB-phoneDivision">
-                <img className="DB-image" src={Phonepng} alt="" />
-                <span className="DB-titleOfInfor">Phone Number</span>
-                <span className="DB-detail">{phoneNumber}</span>
+            <div className="line">
+                <div className="line1">
+                    <div className="name">
+                        <span className="fullName">{name}</span>
+                        <span className="tag">{tag}</span>
+                    </div>
+                    <button className="logOut" onClick={() => props.callBack()}>
+                        <span className="insideLogOut">Logout</span>
+                        <span className="LogOutimg">
+                            <img src={logout} alt="" />
+                        </span>
+                    </button>
+                </div>
+                <div className="line2">
+                    <div className="idDivision">
+                        <div className="image">
+                            <img src={Addresspng} alt="" />
+                        </div>
+                        <div className="titleOfInfor">Identity Code</div>
+                        <div className="detail">{idCode}</div>
+                    </div>
+                    <div className="emailDivision">
+                        <div className="image">
+                            <img src={Emailpng} alt="" />
+                        </div>
+                        <div className="titleOfInfor">Email</div>
+                        <div className="detail">{email}</div>
+                    </div>
+                    <div className="phoneDivision">
+                        <div className="image">
+                            <img src={Phonepng} alt="" />
+                        </div>
+                        <div className="titleOfInfor">Phone Number</div>
+                        <div className="detail">{phoneNumber}</div>
+                    </div>
+                    <button className="changePass">
+                        <span className="insideChangePass">Change password</span>
+                        <div id="changepass">
+                            <img src={changepasspng} alt="" />
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     )

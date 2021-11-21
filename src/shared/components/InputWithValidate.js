@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function InputWithValidate({ props, password, valueState, className, elementId, validate, callBack, needValidateState, message, stylesMessage, styles }) {
+function InputWithValidate({ props, password, valueState, className, elementId, validate, callBack, needValidateState, message, stylesMessage, styles, disable }) {
     const [needValidate, setNeedValidate] = useState(needValidateState) // trigger when parent call validate
     const [validateMessage, setMessage] = useState("")
     useEffect(() => {
@@ -18,7 +18,9 @@ function InputWithValidate({ props, password, valueState, className, elementId, 
         <input className={className} type={(password) ? "password" : "text"} id={elementId} onChange={event => {
             setValue(event.target.value)
             callBack(event.target.value) // update info  to parent
-        }} value={value} />
+        }} value={value}
+            disabled={disable}
+        />
         {
             (needValidate != 1 && validateMessage != "") && <div style={{ width: 450, marginLeft: 10, color: "red", fontWeight: "bold", ...stylesMessage }}>{validateMessage}</div>
         }

@@ -92,17 +92,13 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
 
   return (
     <div className="pops-up-menu">
-      <button type="button" className="button1" onClick={() => { callBack() }} />
-      <h1>Adding/Editting Employee</h1>
+      <div id="head">
+        <button type="button" className="button1" onClick={() => { callBack() }} />
+        <h1>Adding/Editting Employee</h1>
+      </div>
       <div className="content">
         {/* left menu  start*/}
-        <div style={{
-          width: 300,
-          display: "flex",
-          flexDirection: "column",
-          paddingLeft: 30,
-          paddingRight: 30,
-        }}>
+        <div id="left" >
           <h2 style={{ position: "relative", }}>Department</h2>
           <div style={{
             backgroundColor: (role == 1) ? "#6160DC" : "grey",
@@ -114,7 +110,8 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
             alignItems: "center",
             color: "white",
             fontSize: 16,
-            fontWeight: "bold"
+            fontWeight: "bold",
+            cursor: "pointer"
           }}
             onClick={() => {
               if (isAdd != undefined)
@@ -133,7 +130,8 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
               alignItems: "center",
               color: "white",
               fontSize: 16,
-              fontWeight: "bold"
+              fontWeight: "bold",
+              cursor: "pointer"
             }}
             onClick={() => {
               if (isAdd != undefined)
@@ -149,72 +147,129 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
         {/* left menu  end*/}
         {/* right menu  start*/}
         <div className="right-menu">
-          <h2>Account</h2><br />
+          <h2>Account</h2>
           <form name="employee">
-            <div className="left">
-              <label htmlFor="name">Name</label><br />
-              <InputWithValidate
-                elementId="name"
-                callBack={value => updateInfo({ ...info, name: value })}
-                validate={validateString} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.name}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <label htmlFor="id-code">Indentify Code</label><br />
-              <InputWithValidate
-                elementId="id-code"
-                callBack={value => updateInfo({ ...info, identifyNumber: value })}
-                validate={validateIdCode}
-                needValidateState={needValidate}
-                message=""
-                valueState={info.identifyNumber}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <label htmlFor="userName">Username</label><br />
-              <InputWithValidate
-                elementId="username"
-                callBack={value => updateInfo({ ...info, userName: value })}
-                validate={validateString} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.userName}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <label htmlFor="address">Address</label><br />
-              <InputWithValidate
-                elementId="address"
-                callBack={value => updateInfo({ ...info, address: value })}
-                validate={validateString} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.address}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
+            {/* <div className="left"> */}
+            <div class="row">
+              <div class="col">
+                <label class="lab" htmlFor="name">Name</label><br />
+                <InputWithValidate
+                  className="left"
+                  elementId="name"
+                  callBack={value => updateInfo({ ...info, name: value })}
+                  validate={validateString} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.name}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+              <div class="col">
+                <label class="lab" htmlFor="id-code">Indentify Code</label><br />
+                <InputWithValidate
+                  className="left"
+                  elementId="id-code"
+                  callBack={value => updateInfo({ ...info, identifyNumber: value })}
+                  validate={validateIdCode}
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.identifyNumber}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
             </div>
-            <div className="right">
-              <label htmlFor="date-of-birth">Date of birth</label><br />
+            <div className="row">
+              <div class="col">
+                <label class="lab" htmlFor="userName">Username</label><br />
+                <InputWithValidate
+                  elementId="username"
+                  callBack={value => updateInfo({ ...info, userName: value })}
+                  validate={validateString} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.userName}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+              <div class="col">
+                <label class="lab" htmlFor="phoneNumber">Phone number</label><br />
+                <InputWithValidate
+
+                  elementId="phoneNumber"
+                  callBack={value => updateInfo({ ...info, phoneNumber: value })}
+                  validate={validatePhone} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.phoneNumber}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <label class="lab" htmlFor="password">Password</label><br />
+                <InputWithValidate
+                  className="left"
+                  elementId="password"
+                  password={true}
+                  callBack={value => updateInfo({ ...info, password: value })}
+                  validate={validatePassword} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.password}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+              <div class="col">
+                <label class="lab" htmlFor="password">Confirm Password</label><br />
+                <InputWithValidate
+                  password={true}
+                  elementId="password"
+                  callBack={value => updateInfo({ ...info, password: value })}
+                  validate={validatePassword} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.password}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+
+              </div>
+            </div>
+
+
+            {/* </div> */}
+            {/* <div className="right"> */}
+            {/* <label htmlFor="date-of-birth">Date of birth</label><br />
               <InputWithValidate
                 elementId="date-of-birth"
                 callBack={value => updateInfo({ ...info, birth: value })}
@@ -228,53 +283,50 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 styles={{
                   marginBottom: 15,
                 }}
-              />
-              <label htmlFor="phoneNumber">Phone number</label><br />
-              <InputWithValidate
-                elementId="phoneNumber"
-                callBack={value => updateInfo({ ...info, phoneNumber: value })}
-                validate={validatePhone} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.phoneNumber}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <label htmlFor="password">Password</label><br />
-              <InputWithValidate
-                elementId="password"
-                callBack={value => updateInfo({ ...info, password: value })}
-                validate={validatePassword} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.password}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <label htmlFor="email">Email</label><br />
-              <InputWithValidate
-                elementId="email"
-                callBack={value => updateInfo({ ...info, email: value })}
-                validate={validateEmail} // Luôn đúng 
-                needValidateState={needValidate}
-                message=""
-                valueState={info.email}
-                stylesMessage={{
-                  paddingLeft: 20,
-                }}
-                styles={{
-                  marginBottom: 15,
-                }}
-              />
-              <button type="button" className="button save" onClick={() => {
+              /> */}
+
+
+
+
+            <div className="row">
+              <div class="col">
+                <label class="lab" htmlFor="address">Address</label><br />
+                <InputWithValidate
+                  className="left"
+                  elementId="address"
+                  callBack={value => updateInfo({ ...info, address: value })}
+                  validate={validateString} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.address}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+              <div class="col">
+                <label class="lab" htmlFor="email">Email</label><br />
+                <InputWithValidate
+                  elementId="email"
+                  callBack={value => updateInfo({ ...info, email: value })}
+                  validate={validateEmail} // Luôn đúng 
+                  needValidateState={needValidate}
+                  message=""
+                  valueState={info.email}
+                  stylesMessage={{
+                    paddingLeft: 20,
+                  }}
+                  styles={{
+                    marginBottom: 15,
+                  }}
+                />
+              </div>
+            </div>
+            <div class="row">
+              <button type="button" id="save" onClick={() => {
                 setValidate(needValidate + 1)
                 const checkEmail = (validateEmail(info.email) === "")
                 const checkIdCode = (validateIdCode(info.identifyNumber) === "")
@@ -293,12 +345,15 @@ function Add_and_editEmployee({ callBack, infor, isAdd }) {
                 }
               }
               }>
+
+
                 {
                   (loading) ?
                     <PropagateLoader color="white" /> : (isAdd) ? "Add new member" : "Edit this member"
                 }
               </button>
             </div>
+            {/* </div> */}
           </form>
         </div>
         {/* right menu  end*/}

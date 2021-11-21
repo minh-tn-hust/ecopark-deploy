@@ -1,161 +1,242 @@
-#DB-Avartar{
-    position: absolute;
-    width: 195.65px;
-    height: 195px;
-    left: calc(50% - 519.65px/2 - 461.1px);
-    top: 48px;
-    background: #F5F5F5;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    border-radius: 160px;
-}
-.DB-userInfor{
+.userInfor{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
 position: absolute;
-width: 1496px;
-height: 261px;
-left: 379px;
-top: 16px;
+width: 79%;
+height: 28%;
+left: 20%;
+top: 2%;
 background: #FFFFFF;
 border-radius: 40px;
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.DB-name{
-    position: absolute;
-width: 268px;
-height: 82px;
-left: 920.07px;
-top: 28px;
+#Avartar{
+    display: flex;
+    position: relative;
+    height: 80%;
+    left: 1%;
+    top: 1%;
+    background: #F5F5F5;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 50%;
 }
-.DB-fullName{
+#InsideAvt{
+    border-radius: 50%;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    height: 95%;
+    width: 82%;
+    left: 1%;
+    top: 1%;
+}
+.line1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    height: 25%;
+    top: 1%;
+    left: 1%;
+}
+.name{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+
 position: relative;
-width: 400px;
-height: 44px;
-left: calc(50% - 1247px/2 - 188.93px);
-top: 30px;
+width: 35%;
+height: 100%;
+
+}
+.fullName{
+display: flex;
+position: relative;
+width: 100%;
+height: 70%;
+
 font-family: Inter;
 font-style: normal;
 font-weight: bold;
-font-size: 36px;
-line-height: 44px;
+font-size: 2vw;
 color: #22242C;
 }
-.DB-tag{
+.tag{
+display: flex;
 position: relative;
-width: 254px;
-height: 22px;
-left: calc(50% - 1242px/2 - 188.93px);
-top: 40px;
-
-/* Text/Text 1 Regular */
+width: 100%;
+height: 30%;
 
 font-family: Inter;
 font-style: normal;
 font-weight: normal;
-font-size: 18px;
-line-height: 22px;
+font-size: 0.9vw;
 color: #8E8EA1;
 }
-.DB-changePass{
-    position: absolute;
-    width: 256.86px;
-    height: 52px;
-    left: 1203px;
-    top: 180px;
-    background: #6160DC;
-    border-radius: 40px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    
-}
-.DB-insideChangePass{
-    position: absolute;
-    width: 158.53px;
-    height: 22px;
-    left: calc(50% - 1691.53px/2 + 736.42px);
-    top: 14px;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #FFFFFF;
-
-}
-#DB-changepass{
+.logOut{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     position: relative;
-    left: 88px;
-}
-.DB-logOut{
-    position: absolute;
-    width: 144px;
-    height: 52px;
-    left: calc(50% - 500px/2 + 818.5px);
-    top: 23px;
+    width: 10%;
+    height: 80%;
+    left: 0%;
+    top: -70%;
     background: #6160DC;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 40px;
-    
+    cursor: pointer;
 }
-#DB-LogOut{
+.LogOutimg{
+    display: flex;
     position: relative;
-    left: 37px;
+    order: 2;
+    width: 20%;
+    height: 40%;
+    left: 0%;
 }
-.DB-insideLogOut{
-    position: absolute;
-    width: 62px;
-    height: 22px;
-    left: calc(50% - 1742px/2 + 818px);
-    top: 14px;
+.insideLogOut{
+    display: flex;
+    position: relative;
+    
     font-family: Inter;
     font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: left;
-    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1vw;
+    /* identical to box height */
+    
+    top: -3%;
+    color: #ffffff;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 1%;
+    margin-top: 1%;
 }
-.DB-idDivision{
-    position: absolute;
-    width: 216.57px;
-    height: 51px;
-    left: 244px;
-    top: 180px;
+.line2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 98%;
+    height: 27%;
+    bottom: 1%;
+    left: 1%;
 }
-.DB-titleOfInfor{
+.idDivision{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 78%;
+    left: 0%;
+    top: 0%;
+}
+.emailDivision{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 78%;
+    left: -4%;
+    top: 0%;
+}
+.phoneDivision{
+    display: flex;
+    position: relative;
+    width: 30%;
+    height: 78%;
+    left: 6%;
+    top: 0%;
+}
+
+.titleOfInfor{
     position: absolute;
-    width: 101.29px;
-    height: 17px;
-    left: calc(50% - -371.71px/2 - 235.12px);
-    top: 3px;
+    width: 40%;
+    height: 15%;
+    left: 20%;
+    top: 5%;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.8vw;
     color: #8E8EA1;
+
 }
-.DB-detail{
+.detail{
     position: absolute;
-    width: 101.34px;
-    height: 26px;
-    left: calc(50% - -353.65999999999997px/2 - 228.1px);
-    top: 25px;
+    width: 40%;
+    height: 15%;
+    left: 20%;
+    top: 58%;
     font-family: Inter;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 1vw;
     color: #202020;
+
 }
-.DB-emailDivision{
-    position: absolute;
-    width: 219.97000000000003px;
-    height: 52px;
-    left: 508.07px;
-    top: 180px;
+.changePass{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    width: 20%;
+    height: 80%;
+    left: 0%;
+    top: 0%;
+    background: #6160DC;
+    border-radius: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
 }
-.DB-phoneDivision{
-    position: absolute;
-    width: 225.62px;
-    height: 50px;
-    left: 948.04px;
-    top: 180px;
+.insideChangePass{
+    display: flex;
+    position: relative;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1vw;
+    /* identical to box height */
+    
+    top: -3%;
+    color: #ffffff;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 4%;
+    margin-top: 1%;
+
+}
+#changepass{
+    display: flex;
+    position: relative;
+    order: 2;
+    width: 20%;
+    height: 40%;
+    left: 6%;
+}
+.image{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 1%;
+    left: 1%;
 }

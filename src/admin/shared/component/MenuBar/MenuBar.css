@@ -1,14 +1,48 @@
+#MenuBar{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: baseline;
+position: absolute;
+width: 17.5%;
+height: 70%;
+border-radius: 30px; 
+background: white ;    
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
+border-bottom-style: hidden;
+margin-left: 1%;
+margin-top: 1%;
+z-index: 0;
+}
+.logo{
+    display: flex;
+    order: 1;
+    justify-content: center ;
+    
+    position: relative;
+    width: 50%;
+    height: 15%;
+    left: 25%;
+}
+.List{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 63%;
+    height: 60%;
+    margin-left: 7%;
+}
 .seButton{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    padding: 16px 24px;
+    align-items: baseline;
+    justify-content: flex-start;
+    cursor: pointer;
 
-    position: static;
-    width: 221px;
-    height: 50px;
-    left: 0px;
-    top: 0px;
+    position: relative;
+    width: 100%;
+    height: 14%;
 
     box-sizing: border-box;
     /* Shadow */
@@ -21,139 +55,125 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-    margin: 24px ;
-    margin-left: 30px;
+    margin: 12% ;
+    margin-left: 19%;
 
 }
 .button{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-start;
+    cursor: pointer;
 
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 16px 24px;
+    position: relative;
+    width: 100%;
+    height: 14%;
 
-position: static;
-width: 221px;
-height: 50px;
-left: 0px;
-top: 0px;
+    box-sizing: border-box;
+    /* Shadow */
 
-box-sizing: border-box;
-/* Shadow */
-
-filter: drop-shadow(0px 20px 50px rgba(191, 21, 108, 0.05));
-border-radius: 20px;
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 24px ;
-margin-left: 30px;
+    filter: drop-shadow(0px 20px 50px rgba(191, 21, 108, 0.05));
+    border-radius: 20px;
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 12% ;
+    margin-left: 19%;
+    
 }
 
-.logo{
-    position: static;
-    width: 154px;
-    height: 98.48px;
-    left: 96px;
-    top: 68px;
-    margin-left: 97px;
-    margin-top: 61px;
-    margin-bottom: 20px;
-}
 
-.seIcon{
+.seIcon {
     /* Vector */
 
-position: absolute;
-left: -120px;
-right: 8.33%;
-top: 6px;
-bottom: 8.33%;
-
+    display: flex;
+    position: relative;
+    
+    height: 50%;
+    top: 20%;
+    left: 10%;
 }
 .icon{
     /* Vector */
+order: 1;
+display: flex;
+position: relative;
 
-
-position: absolute;
-left: -120px;
-right: 8.33%;
-top: 6px;
-bottom: 8.33%;
-
+width: 30%;
+height: 60%;
+top: 15%;
+left: 10%;
 }
 .titleOfSebutton{
-    /* Dashboard */
+    display: flex;
+    position: relative;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1vw;
+    /* identical to box height */
+    
+    
+    color: #ffffff;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    margin-left: 4%;
+    margin-top: 6%;
+}
 
-position: absolute;
-width: 130px;
-height: 22px;
-left: 68px;
-top: 13px;
+.titleOfButton {
+    /* Dashboard */
+display: flex;
+position: relative;
+
 
 font-family: Inter;
 font-style: normal;
 font-weight: bold;
-font-size: 18px;
-line-height: 22px;
+font-size: 1vw;
 /* identical to box height */
 
+    color: #8E8EA1;
 
-color: white;
+    /* Inside Auto Layout */
 
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 0px;
-}
-.titleOfButton{
-    /* Dashboard */
-
-position: absolute;
-width: 130px;
-height: 22px;
-left: 68px;
-top: 13px;
-
-font-family: Inter;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
-line-height: 22px;
-/* identical to box height */
-
-
-color: #8E8EA1;
-
-
-/* Inside Auto Layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 0px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 0px;
 }
 
-#MenuBar{
-position: absolute;
-width: 345px;
-height: 600px;
-left: 0px;
-top: 0px;
-border-radius: 30px; 
-background: white ;    
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));   
-border-bottom-style: hidden;
-margin-left: 22px;
-margin-top: 16px;
-z-index: 0;
+#MenuBar {
+    position: absolute;
+    width: 345px;
+    height: 600px;
+    left: 0px;
+    top: 0px;
+    border-radius: 30px;
+    background: white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-bottom-style: hidden;
+    margin-left: 22px;
+    margin-top: 16px;
+    z-index: 0;
 }
-.List{
+
+.List {
     margin-left: 33px;
 }
+/* 
+flex: none;
+order: 2;
+flex-grow: 0;
+margin-left: 4%;
+margin-top: 6%;
+} */

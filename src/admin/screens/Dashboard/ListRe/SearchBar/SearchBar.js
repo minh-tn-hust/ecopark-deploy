@@ -44,8 +44,8 @@ function SearchBar({ list, callBack, role }) {
         </div>
         <a className="Delete" href="#" onClick={async () => {
           console.log("List member deleteeeeeeeeeeeeeeeeeeeeeeeeeeee")
-          setLoading(true)
           if (listDelete.length != 0) {
+            setLoading(true)
             setListDelete(true)
             console.log(listDelete)
             var list = []

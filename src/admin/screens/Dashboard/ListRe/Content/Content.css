@@ -177,7 +177,7 @@ h2 {
 
 .contenttable {
     position: relative;
-    margin-left: 10px;
+    margin-left: 25px;
     border-collapse:collapse
 }
 
@@ -217,7 +217,7 @@ th {
     margin-right: 20px;
     height: 48px;
     width: 48px;
-    border-radius: 50%;
+    border-radius: 40px;
 }
 
 .contentemail {
@@ -231,6 +231,13 @@ th {
 tr:hover {
     background-color: #d5cae6;
 }
+
+tr:hover .hover-content{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
 .contentstatus:hover {
     background-color: #0909e9;
 }
@@ -304,7 +311,7 @@ tr:hover {
     height: 112px;
 }
 .contentdrop-down-button {
-    background-color: #6160DC;
+    background-color: rgba(0, 0, 0, 0);
     border: 30;
     border-radius: 70px;
     width: 110px;
@@ -323,7 +330,7 @@ tr:hover {
     position: relative;
 }
 .contentdrop-down-button:hover {
-    background-color: #0909e9;
+    /* background-color: #0909e9; */
 }
 .contentdrop-down-button-list {
     width: 100px;
@@ -352,4 +359,19 @@ tr:hover {
 
 .contentedit-button:hover {
     background-color: rgb(67, 67, 136);
+}
+
+
+.hover-content {
+    text-align: start;
+    border-radius: 15px;
+    background-color: #6160DC;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* height: 400px; */
+    width: 400px;
+    position: absolute;
+    top: -5px;
+    left: -510px;
+    display: none;
 }

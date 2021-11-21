@@ -8,7 +8,7 @@ import { CircleLoader, PacmanLoader, PropagateLoader } from 'react-spinners';
 
 function Login({ callBack }) {
     async function postData(username, password) {
-        const url = 'https://nmcnpm.herokuapp.com/api/v1/admin/login'
+        const url = 'https://nmcnpm.herokuapp.com/api/v1/' + role + '/login'
         const data = {
             email: username,
             password: password,
@@ -16,6 +16,8 @@ function Login({ callBack }) {
         setIsLoading(true)
         const response = await axios.post(url, data).then(function (response) {
             const getData = (response.data)
+            console.log(getData)
+            console.log(getData.status)
             if (getData.status === "fail") {
                 const message = getData.msg
                 if (message.includes('email')) {
@@ -24,8 +26,10 @@ function Login({ callBack }) {
                     setServerMessage([serverMessage[0], message])
                 }
             } else {
+                localStorage.setItem("role", role)
                 localStorage.setItem("token", getData.token)
-                callBack()
+                localStorage.setItem("info", JSON.stringify(getData.data))
+                callBack(role)
             }
         }).catch(function (error) {
             console.log(error);
@@ -37,6 +41,7 @@ function Login({ callBack }) {
     const [password, setPassword] = useState("")
     const [needValidateState, setValidate] = useState(1)
     const [serverMessage, setServerMessage] = useState(["", ""])
+    const [role, setRole] = useState("admin")
     return (
         <div className="login-screen">
             <div className="login-left-layout">
@@ -69,14 +74,29 @@ function Login({ callBack }) {
                         valueState={password}
                         needValidateState={needValidateState}
                         validate={validatePassword} />
-                    <button disabled={isLoading} className="login-button" onClick={() => {
-                        setValidate(needValidateState + 1)
-                        setServerMessage(["", ""])
-                        if (validateEmail(username) == "" && validatePassword(password) == "") {
-                            postData(username, password)
-                        }
-                    }}>{(isLoading) ? <PropagateLoader color="white" size={10} /> : "Sign In"}</button>
-                    {/* <a href="#" className="forgot">Forgot Password</a> */}
+                    <div style={{
+                        display: 'flex',
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        height: 50
+                    }}>
+                        <button disabled={isLoading} className="login-button" onClick={() => {
+                            setValidate(needValidateState + 1)
+                            setServerMessage(["", ""])
+                            if (validateEmail(username) == "" && validatePassword(password) == "") {
+                                postData(username, password)
+                            }
+                        }}>{(isLoading) ? <PropagateLoader color="white" size={10} /> : "Sign In"}</button>
+                        {/* <a href="#" className="forgot">Forgot Password</a> */}
+                        <select name="cars" id="cars" className="login-button" onChange={(e) => {
+                            setRole(e.target.value)
+                            console.log(e.target.value)
+                        }}>
+                            <option value="admin">Admin</option>
+                            <option value="receptionist">Receptionist</option>
+                            <option value="staff">Staff</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

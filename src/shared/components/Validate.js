@@ -24,9 +24,9 @@ function validateResidentCode(value) {
 }
 function validatePassword(value) {
     if (value === "admin") return ""
-    let reg = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+    let reg = /^.{6,}$/
     if (!reg.test(value)) {
-        return "Password minimum eight characters, at least one uppercase letter, one lowercase letter and one number"
+        return "Password minimum 6 characters"
     } else return ""
 }
 export {
