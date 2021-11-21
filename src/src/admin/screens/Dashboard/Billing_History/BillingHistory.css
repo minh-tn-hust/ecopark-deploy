@@ -1,0 +1,381 @@
+.billingHistory{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+position: absolute;
+width: 58%;
+height: 65%;
+left: 20%;
+top: 32%;
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background: #FFFFFF;
+border-radius: 40px;
+}
+h1{
+    display: flex;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 5%;
+    top: 2%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: #22242C;
+}
+.listBill{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+
+position: absolute;
+width: 100%;
+height: 90%;
+left: 0%;
+top: 5%;
+}
+.list:hover{
+    background-color: #c6c6f8;
+}
+.list{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+flex-wrap: wrap;
+align-items: center;
+position: relative;
+width: 100%;
+height: 13%;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.BHInf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.avatar{
+display: flex;
+height: 75%;
+left: 5%;
+top: 5%;
+position: absolute;
+/* Gray 2 */
+
+background: #F5F5F5;
+border-radius: 50%;
+}
+#avatarBH{
+    height: 100%;
+    border-radius: 50%;
+}
+.nameUser{
+    display: flex;
+    justify-content: baseline;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 11%;
+    top: 27%;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0.9vw;
+    color: #22242C;
+}
+.id{
+display: flex;
+position: absolute;
+width: 30%;
+height:30%;
+left: 35%;
+top: 27%;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 0.9vw;
+/* identical to box height */
+
+
+color: #808080;
+}
+.amount{
+    display: flex;
+    position: absolute;
+width: 30%;
+height: 30%;
+left: 50%;
+top: 27%;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 0.9vw;
+/* identical to box height */
+
+
+/* Black */
+
+color: #22242C;
+}
+.BHTime{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    left: 60%;
+    top: -5%;
+}
+.date{
+    position: relative;
+width: 100%;
+height: 505;
+left: 0%;
+top: 0%;
+
+/* Text/Text 1 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 0.9vw;
+/* identical to box height */
+
+
+/* Black */
+
+color: #22242C;
+}
+.time{
+    position: relative;
+    width: 100%;
+    height: 505;
+    left: 0%;
+    top: 0%;
+
+/* Text/Text 2 Regular */
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 0.7vw;
+/* identical to box height */
+
+
+/* Gray */
+
+color: #8E8EA1;
+}
+.Complete{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+position: absolute;
+width: 10%;
+height: 60%;
+left: 78%;
+top: 15%;
+
+background: #00A389;
+border-radius: 20px;
+}
+.Pending{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    left: 78%;
+    top: 15%;
+
+background: #8E8EA1;
+border-radius: 20px;
+}
+.Canceled{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    left: 78%;
+    top: 15%;
+
+background: #ff0318;
+border-radius: 20px;
+}
+.textStatus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+position: relative;
+width: 30%;
+height: 30%;
+left: 0%;
+top: -3%;
+
+/* Text/Text 2 Semi Bold */
+
+font-family: Inter;
+font-style: normal;
+font-weight: 600;
+font-size: 0.8vw;
+/* identical to box height */
+
+text-align: center;
+
+color: #ffffff;
+}
+.deleteIc{
+position: absolute;
+height: 40%;
+left: 95%;
+top: 25%;
+border-style: hidden;
+background: white;
+border-radius: 50%;
+cursor: pointer;
+}
+#deleteIci{
+    height: 100%;
+}
+.pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+width: 100%;
+height: 10%;
+left: 0%;
+top: 90%;
+}
+.page{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+
+position: absolute;
+width: 50%;
+height: 100%;
+left: 75%;
+
+}
+.backPage{
+    display: flex;
+    background-color: #ffffff;
+    position: relative;
+    order: 0;
+    height: 50%;
+    top: 5%;
+    cursor: pointer;
+}
+#backPagei{
+    height: 80%;
+}
+.nextPage{
+    display: flex;
+    background-color: #ffffff;
+    position: relative;
+    order: 5;
+    height: 50%;
+    top: 5%;
+    cursor: pointer;
+}
+#nextPagei{
+    height: 80%;
+}
+.onPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    position: relative;
+    width: 7.5%;
+    height: 70%;
+
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    /* Inside Auto Layout */
+    background-color: #6160DC   ;
+    flex: none;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    font-size: 0.8vw;
+    flex-grow: 0;
+    box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+}
+.outPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    position: relative;
+    width: 7.5%;
+    height: 70%;
+    
+    
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+    /* Inside Auto Layout */
+    background-color: #F5F5F5;
+    flex: none;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    font-size: 0.8vw;
+    flex-grow: 0;
+    box-shadow: 0px 7px 16px rgba(0, 0, 0, 0.14);
+    border-radius: 50%;
+    }
+
+#Onetosix{
+    font-family: Inter;
+font-weight: bold;
+}
+#quantityOfBill{
+    font-family: Inter;
+    font-weight: bold;
+}
+#S{
+    position: relative;
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 0.65vw;
+left: 20%;
+/* Gray */
+
+color: #8E8EA1;
+
+}
+.nbrOfOnPage{
+    color: #ffffff;
+}
+.nbrOfOutPage{
+    color: #000000;
+}
